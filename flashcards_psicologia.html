@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards de Psicologia - Banca IDCAP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .flashcard-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .flashcard {
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+        .flashcard-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .flashcard.flipped .flashcard-inner {
+            transform: rotateY(180deg);
+        }
+        .flashcard-front, .flashcard-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .flashcard-front {
+            background-color: #007bff;
+            color: white;
+        }
+        .flashcard-back {
+            background-color: #28a745;
+            color: white;
+            transform: rotateY(180deg);
+        }
+        .flashcard-back p {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flashcards de Psicologia para Provas da IDCAP</h1>
+    <p>Clique em um card para virar e ver a resposta. Estude os temas cobrados!</p>
+    <div class="flashcard-container">
+        <!-- Flashcard 1 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Fundamentos da Psicologia</h3>
+                    <p>Conceitos básicos, campos de atuação e principais abordagens teóricas.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>A Psicologia busca compreender a subjetividade humana, envolvendo emoções, pensamentos e ações. Conceitos: processos psicológicos básicos (percepção, memória, etc.), comportamento e subjetividade. Abordagens: Psicanálise (Freud), Behaviorismo (Skinner), Cognitiva (Beck), Humanista (Rogers), Gestalt. Campos: clínica, organizacional, escolar, social, hospitalar. Ciência sistemática com Código de Ética.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 2 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Matrizes do Pensamento em Psicologia</h3>
+                    <p>Existencial Humanista, Behaviorista e Cognitiva Comportamental.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Existencial-Humanista: Foco na experiência subjetiva, liberdade e autorrealização (Rogers, Maslow). Behaviorista: Comportamento observável moldado por reforços (Skinner). Cognitivo-Comportamental: Integra cognições e comportamentos para modificar pensamentos disfuncionais (Beck). Complementares, não hierárquicas.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 3 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Avaliação Psicológica</h3>
+                    <p>Conceitos, instrumentos, técnicas e limites éticos.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Processo de investigação de fenômenos psicológicos para tomadas de decisão. Conceito: psicodiagnóstico com múltiplas fontes. Instrumentos: entrevistas, testes (SATEPSI), projetivos. Técnicas: anamnese, observação. Limites: sigilo, consentimento, validade temporal, competência profissional (CFP).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 4 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Elaboração de Laudos, Relatórios e Pareceres</h3>
+                    <p>Como elaborar laudos, relatórios e pareceres psicológicos.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Laudo: Resultado de avaliação, com diagnóstico e prognóstico. Relatório: Narra atuação, com análise descritiva. Parecer: Opinião técnica sobre questão-problema. Estrutura: identificação, demanda, procedimento, análise, conclusão. Ética: sigilo, linguagem acessível, guarda por 5 anos (CFP 06/2019).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 5 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Psicologia do Desenvolvimento</h3>
+                    <p>Desenvolvimento humano nas fases do ciclo vital.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Mudanças físicas, cognitivas, socioemocionais ao longo da vida (concepção à morte). Fatores genéticos e ambientais. Teorias: Piaget (cognitivo), Erikson (psicossocial), Freud (psicossexual), Vygotsky (sociocultural). Fases: pré-natal, infância, adolescência, adultez, envelhecimento. Multidimensional e contínuo.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 6 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Aspectos Cognitivos, Emocionais, Sociais e Comportamentais</h3>
+                    <p>Aspectos do desenvolvimento.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Cognitivo: inteligência, memória, linguagem (Piaget). Emocional: regulação afetiva, apego. Social: interações, cultura (Vygotsky). Comportamental: habilidades motoras. Interdependentes, influenciados por ambiente e genética. Abordagem contextualista.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 7 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Psicologia da Infância, Adolescência, Adultez e Envelhecimento</h3>
+                    <p>Atuação da Psicologia nessas fases.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Infância: estimulação cognitiva, prevenção de traumas. Adolescência: identidade, autonomia, puberdade (transformações físicas/psíquicas). Adultez: carreira, família, crises. Envelhecimento: adaptação a perdas, saúde mental. Abordagem ecológica (Bronfenbrenner), contextualista, com foco em trajetórias de vida.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 8 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Psicologia da Aprendizagem e Educação</h3>
+                    <p>O que é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Integra psicologia e educação para otimizar aprendizagem e desenvolvimento. Foca processos de aquisição de conhecimento, estratégias pedagógicas, formação de professores. Teorias: Behaviorismo (reforço), Cognitivismo (construção), Humanismo (significado), Socioconstrutivismo (Vygotsky).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 9 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Teorias da Aprendizagem</h3>
+                    <p>Principais teorias.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Behaviorista: Aprendizagem por reforço/punição (Skinner). Cognitivista: Construção ativa de conhecimento (Piaget). Humanista: Aprendizagem significativa e autorrealização (Rogers). Socioconstrutivista: Interação social e cultura (Vygotsky). Aplicações: Ensino personalizado, motivação.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 10 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Dificuldades de Aprendizagem</h3>
+                    <p>O que são e como atuar?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Transtornos específicos (dislexia, disgrafia, discalculia) não ligados à inteligência, mas a processamento cerebral. Causas: neurológicas, ambientais. Atuação: diagnóstico precoce, intervenções pedagógicas personalizadas, apoio multidisciplinar (psicopedagogos, fonoaudiólogos).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 11 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Atuação do Psicólogo no Contexto Educacional</h3>
+                    <p>Qual é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Prevenção, avaliação de dificuldades, orientação pedagógica, promoção de inclusão. Trabalha em equipe interdisciplinar, elabora PEIs, combate bullying e preconceitos. Foco em desenvolvimento integral e relações escolares (CFP).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 12 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Psicologia Social e Comunitária</h3>
+                    <p>Processos grupais e relações interpessoais.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Processos grupais: Dinâmicas de influência social, conformidade, liderança (Lewin). Relações interpessoais: Comunicação, empatia, resolução de conflitos. Abordagem crítica, focada em sujeito no contexto sócio-histórico, promovendo cidadania e transformação social.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 13 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Psicologia Comunitária e Participação Social</h3>
+                    <p>O que é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Prática transformadora para empoderamento de grupos marginalizados. Foca conscientização crítica, mobilização, participação em decisões. Atuação no território, fortalecendo redes locais e enfrentando desigualdades (Montero, Martín-Baró).</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 14 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Intervenções Psicossociais em Comunidades</h3>
+                    <p>Quais são?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Ações coletivas para bem-estar: grupos de apoio, oficinas, psicoterapia em grupo, suporte vocacional. Foco em resiliência, autonomia, redução de isolamento. Baseadas em psicologia comunitária, com participação ativa dos moradores.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 15 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Saúde Mental</h3>
+                    <p>Conceitos de saúde e saúde mental.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Saúde (OMS): Bem-estar físico, mental, social. Saúde mental: Equilíbrio emocional/cognitivo, realização de habilidades, resiliência a estresses. Não ausência de doença; direito humano fundamental.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 16 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Promoção, Prevenção e Atenção em Saúde Mental</h3>
+                    <p>Descreva.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Promoção: Hábitos saudáveis, campanhas (Janeiro Branco). Prevenção: Redução de riscos (Setembro Amarelo). Atenção: Tratamentos integrados no SUS (RAPS), com foco em reabilitação psicossocial.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 17 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Atenção Psicossocial e Rede de Cuidados</h3>
+                    <p>O que é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>RAPS: Rede articulada para cuidado integral (CAPS, UBS, urgências). Princípios: territorialidade, projeto terapêutico singular, reabilitação comunitária. Substitui modelo hospitalocêntrico.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 18 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Atuação em Situações de Sofrimento Psíquico</h3>
+                    <p>Como atuar?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Acolhimento sem julgamentos, escuta ativa, validação emocional. Suporte prático, fomento à autonomia. Integração à rede (CAPS), PTS. Evitar medicalização excessiva, focar em contexto social.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 19 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Trabalho Interdisciplinar</h3>
+                    <p>Atuação em equipes multiprofissionais.</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Colaboração entre saberes (saúde, social, educação) para atendimento holístico. Foco no usuário, comunicação e planejamento conjunto. Exemplo: Equipes em CRAS, CAPS.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 20 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Articulação Intersetorial</h3>
+                    <p>O que é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Colaboração entre setores (saúde, educação, justiça) para políticas integradas. Otimiza recursos, resolve problemas complexos (ex: violência doméstica). Desafios: superar silos institucionais.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 21 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Comunicação e Trabalho em Rede</h3>
+                    <p>Como funciona?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Modelo colaborativo flexível para compartilhar recursos. Comunicação eficaz (empatia, ferramentas digitais). Vantagens: eficiência, inovação. Essencial para saúde mental e direitos sociais.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 22 -->
+        <div class="flashcard" onclick="flipCard(this)">
+            <div class="flashcard-inner">
+                <div class="flashcard-front">
+                    <h3>Atuação do Psicólogo na Administração Pública Municipal</h3>
+                    <p>Qual é?</p>
+                </div>
+                <div class="flashcard-back">
+                    <p>Intersetorial em assistência social (CRAS/CREAS), saúde (UBS/CAPS), educação e RH. Foco em prevenção, acolhimento, fortalecimento de vínculos, garantia de direitos. Diretrizes CFP: ética, direitos humanos, autonomia do usuário.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Flashcard 23 -->
+        <div class="flashcard" onclick="flipCard(this)">
